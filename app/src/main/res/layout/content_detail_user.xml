@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_photo"
+                style="@style/field_profile_picture_styles"
+                android:src="@color/toolbar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:civ_border_color="#FF909090"
+                app:civ_border_width="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="4dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!--  Post Counts Label and Field -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_repository"
+                        style="@style/field_profile_count_styles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="3K" />
+
+                    <TextView
+                        android:id="@+id/label_posts_count"
+                        style="@style/label_profile_count_styles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repository" />
+
+                </LinearLayout>
+
+                <!--  Followers Counts Label and Field -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_followers"
+                        style="@style/field_profile_count_styles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="89K" />
+
+                    <TextView
+                        android:id="@+id/label_followers_count"
+                        style="@style/label_profile_count_styles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/followers" />
+
+                </LinearLayout>
+
+                <!--  Following Counts Label and Field -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_following"
+                        style="@style/field_profile_count_styles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="274" />
+
+                    <TextView
+                        android:id="@+id/label_following_count"
+                        style="@style/label_profile_count_styles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/following" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                tools:text="@string/name" />
+
+            <TextView
+                android:id="@+id/text_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_name"
+                android:fontFamily="@font/poppins_medium"
+                tools:text="@string/company" />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_company"
+                android:fontFamily="@font/poppins_medium"
+                tools:text="@string/location" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

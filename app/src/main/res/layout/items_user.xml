@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@color/toolbar"
+        app:civ_border_color="#FF909090"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_photo"
+        app:layout_constraintTop_toTopOf="@+id/img_photo"
+        tools:text="@string/username" />
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_photo"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_username"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username"
+        tools:text="@string/name" />
+
+    <ImageButton
+        android:id="@+id/img_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@id/tv_item_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_item_username"
+        app:srcCompat="@drawable/ic_share_black"
+        android:contentDescription="@string/button_share"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
